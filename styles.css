@@ -868,6 +868,15 @@ body {
     font-weight: 700;
 }
 
+/* Desktop Search Section */
+.desktop-search-section {
+    display: none;
+    align-items: center;
+    flex: 0 0 auto;
+    max-width: 600px;
+    margin-right: 40px;
+}
+
 /* Right side - Search Bar */
 .search-section {
     display: flex;
@@ -881,6 +890,10 @@ body {
 @media (min-width: 992px) {
     .nav-left .search-section {
         display: none;
+    }
+    
+    .desktop-search-section {
+        display: flex;
     }
     
     .hamburger-menu {
@@ -3633,6 +3646,10 @@ body {
 
 /* Ensure navigation links are visible in collapsible menu */
 @media (max-width: 991px) {
+    .desktop-search-section {
+        display: none !important;
+    }
+    
     .nav-left.active .nav-links {
         display: flex !important;
         visibility: visible !important;
@@ -3678,6 +3695,9 @@ body {
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .mobile-nav-overlay.active {
@@ -3693,6 +3713,8 @@ body {
     flex-direction: column;
     padding: 20px;
     position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .mobile-nav-header {
@@ -3828,10 +3850,12 @@ body {
 @media (max-width: 991px) {
     .mobile-nav-overlay {
         display: none;
+        opacity: 0;
     }
     
     .mobile-nav-overlay.active {
-        display: flex;
+        display: flex !important;
+        opacity: 1;
     }
 }
 

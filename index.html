@@ -7,7 +7,16 @@
     <meta name="keywords" content="ремонт, битова техника, сервиз, гаранция, електроника">
     <title>ASH - Професионален сервиз за ремонт на битова техника</title>
     <link rel="icon" type="image/png" href="logo-cut.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <style>
+        /* Fallback styles in case CSS doesn't load */
+        .mobile-nav-overlay {
+            display: none !important;
+        }
+        .mobile-nav-overlay.active {
+            display: flex !important;
+        }
+    </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -61,6 +70,15 @@
                         </div>
                     </div>
                 </nav>
+                
+                <!-- Desktop Search Section -->
+                <div class="desktop-search-section" role="search">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <input type="text" placeholder="Търсене на публикации" class="search-input" aria-label="Търсене">
+                        <div class="search-shortcut" aria-hidden="true">/</div>
+                    </div>
+                </div>
             </div>
         </nav>
         
@@ -541,10 +559,19 @@
         
         // Mobile Navigation Functionality with Accessibility
         document.addEventListener('DOMContentLoaded', function() {
-            const hamburgerBtn = document.getElementById('hamburger-btn');
-            const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-            const mobileNavClose = document.getElementById('mobile-nav-close');
-            const navMenu = document.getElementById('nav-menu');
+            try {
+                const hamburgerBtn = document.getElementById('hamburger-btn');
+                const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+                const mobileNavClose = document.getElementById('mobile-nav-close');
+                const navMenu = document.getElementById('nav-menu');
+                
+                // Debug logging
+                console.log('Mobile nav elements found:', {
+                    hamburgerBtn: !!hamburgerBtn,
+                    mobileNavOverlay: !!mobileNavOverlay,
+                    mobileNavClose: !!mobileNavClose,
+                    navMenu: !!navMenu
+                });
             
             // Open mobile navigation
             if (hamburgerBtn && mobileNavOverlay) {
@@ -669,6 +696,9 @@
                 });
             });
             
+            } catch (error) {
+                console.error('Error initializing mobile navigation:', error);
+            }
         });
     </script>
 </body>
