@@ -944,7 +944,7 @@ body {
 
 /* Style the Font Awesome icons */
 .nav-links li a i {
-    color: #0843b7;
+    color: white;
     font-size: 14px;
     transition: color 0.3s ease;
 }
