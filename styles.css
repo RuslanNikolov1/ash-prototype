@@ -451,7 +451,7 @@ body {
         repeat,
         repeat,
         no-repeat;
-    padding: 0.5rem 0;
+    padding: 3rem 0;
     text-align: center;
     position: relative;
 }
@@ -504,13 +504,15 @@ body {
     margin-right: 0.25rem;
 }
 
+
+
 /* Specific fixes for 768px-1440px range */
 @media (min-width: 768px) and (max-width: 1440px) {
 
     /* Fix header visibility issues - Compact layout */
     .nav-container {
         margin-left: 0 !important;
-        padding: 0 0.5rem !important;
+        padding: 0 1rem !important;
         min-height: 3rem !important;
         max-height: 3.5rem !important;
         overflow: visible !important;
@@ -520,7 +522,7 @@ body {
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
-        gap: 0.5rem !important;
+        gap: 1rem !important;
     }
 
     .main-logo {
@@ -537,8 +539,8 @@ body {
     }
 
     .nav-left {
-        margin-left: 3.5rem !important;
-        margin-right: 0.5rem !important;
+        margin-left: 2rem !important;
+        margin-right: 1rem !important;
         flex-shrink: 0 !important;
         display: flex !important;
         position: static !important;
@@ -2127,7 +2129,7 @@ body {
 }
 
 .day-name i {
-    font-size: 1.1rem;
+    font-size:1.5rem;
     color: #20B2AA;
     transition: all 0.3s ease;
 }
@@ -2518,7 +2520,7 @@ body {
 }
 
 .location-detail {
-    font-size: 1.1rem;
+    font-size:1.5rem;
     color: #0843b7;
     margin: 0;
     opacity: 0.8;
@@ -2618,7 +2620,7 @@ body {
     }
 
     .address {
-        font-size: 1.1rem;
+        font-size:1.5rem;
         text-align: center;
     }
 
@@ -2634,7 +2636,7 @@ body {
     }
 
     .contact-item span {
-        font-size: 1.1rem;
+        font-size:1.5rem;
         text-align: center;
     }
 
@@ -2646,7 +2648,7 @@ body {
     }
 
     .footer-link {
-        font-size: 1.1rem;
+        font-size:1.5rem;
         padding: 10px 15px;
         text-align: center;
     }
@@ -3343,7 +3345,7 @@ body {
     }
 
     .location-detail {
-        font-size: 1.1rem;
+        font-size:1.5rem;
         text-align: left;
     }
 
@@ -3591,7 +3593,7 @@ body {
 
     .about-us-text {
         text-align: center;
-        font-size: 1.1rem;
+        font-size:1.5rem;
     }
 
     .hero-banner-slider {
@@ -3621,7 +3623,7 @@ body {
     }
 
     .service-item span {
-        font-size: 1.1rem;
+        font-size:1.5rem;
     }
 
     /* Working Hours Section */
@@ -3651,7 +3653,7 @@ body {
     }
 
     .day-hours {
-        font-size: 1.1rem;
+        font-size:1.5rem;
     }
 
     /* Transport Section */
@@ -3763,7 +3765,7 @@ body {
     }
 
     .contact-item span {
-        font-size: 1.1rem;
+        font-size:1.5rem;
     }
 
     .footer-nav {
@@ -3910,6 +3912,9 @@ body {
         font-size: 11px;
         padding: 0 15px;
     }
+    .top-banner {
+        padding: 3rem 0;
+    }
 
     .banner-text {
         font-size: 11px;
@@ -4045,7 +4050,7 @@ body {
     }
 
     .day-name {
-        font-size: 1.1rem;
+        font-size:1.5rem;
     }
 
     .day-hours {
@@ -4160,7 +4165,7 @@ body {
     }
 
     .contact-item i {
-        font-size: 1.1rem;
+        font-size:1.5rem;
     }
 
     .contact-item span {
@@ -4463,7 +4468,7 @@ body {
 }
 
 /* Hide mobile nav on desktop */
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
     .mobile-nav-overlay {
         display: none !important;
     }
@@ -4699,7 +4704,7 @@ nav[role="navigation"] {
     }
 
     .nav-left {
-        margin-left: 7rem !important;
+        margin-left: 2rem !important;
     }
 
     /* Decrease about section size */
@@ -4751,3 +4756,69 @@ nav[role="navigation"] {
 .hero-banner-slider {
   overflow: visible !important;
 }
+
+/* Hamburger menu for screens under 1024px */
+@media (max-width: 1024px) {
+  /* Hide regular navigation */
+  .nav-left {
+    display: none !important;
+  }
+  
+  /* Show hamburger menu */
+  .hamburger-menu {
+    display: block !important;
+    position: absolute !important;
+    right: 1rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 1000 !important;
+  }
+  
+  /* Adjust nav container for hamburger */
+  .nav-container {
+    justify-content: space-between !important;
+    padding: 0 1rem !important;
+    position: relative !important;
+  }
+  
+  /* Position logo and hamburger */
+  .main-logo {
+    position: relative !important;
+    left: 0 !important;
+    transform: none !important;
+    height: 60px !important;
+    margin-right: auto !important;
+  }
+  
+  .main-logo-img {
+    height: 50px !important;
+  }
+}
+
+/* Specific fixes for 1024px-425px range */
+@media (max-width: 1024px) and (min-width: 425px) {
+    .header-container,
+    .top-banner,
+    .info-banner,
+    .top-nav,
+    .nav-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      overflow-x: hidden !important;
+    }
+  
+    .nav-container {
+      padding: 0 0.5rem !important;
+      margin-left: 0 !important;
+    }
+  
+    .nav-left {
+      margin-left: 0 !important;
+    }
+  
+    .main-logo {
+      left: 0 !important;
+      transform: translateY(-50%) !important;
+    }
+  }
