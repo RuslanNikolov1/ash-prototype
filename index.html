@@ -562,7 +562,11 @@
             
             function setHeroBannerHeight() {
                 if (images[current] && heroBanner) {
-                    heroBanner.style.height = 800 + 'px';
+                    // Completely remove any height manipulation
+                    heroBanner.style.height = '';
+                    heroBanner.style.maxHeight = '';
+                    heroBanner.style.minHeight = '';
+                    heroBanner.style.overflow = 'hidden';
                 }
             }
             
